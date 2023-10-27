@@ -1,0 +1,58 @@
+<div class="ekart--products--container">
+    
+    
+    
+    <div class="ekart--product--item" *ngFor = "let prod of products let i = index" >
+        <div class="ekart-wishlist-sale-container">
+            <div class="ekart--add--to--wishlist">
+                <i class="fa-solid fa-heart"></i>
+                <i> {{i}} </i>
+            </div>
+            <div class="ekart-on-sale-tag">75% OFF</div>
+          </div>
+          <div class="ekart--product--image">
+              <img [src]="prod.imageURL" class="ekart--product--image">
+          </div>
+          <div class="ekart--add--to--price">
+              PRICE
+          </div>
+          <div class="ekart--product--name">{{prod.name}}</div>
+          <div class="ekart--product--category">{{prod.gender}} . {{prod.category}} . {{prod.brand}}</div>
+          <div class="ekart--product--available-colors">$COLORCOUNT {{prod.color}} . Best Seller</div>
+    </div>
+    
+    
+    
+    <!-- <img [src]="product.pImage">
+    <p>Name: {{ product.name }}</p>  
+    <p>Color: {{product.color}}</p>
+    <p>Discounted Price: {{ getDiscountedPrice().toFixed(2) }}</p>
+    <p>{{ product.inStock > 0 ? 'only '+ product.inStock + ' items left' : 'not in stock'}}</p>
+    <button [disabled] = "!(product.inStock > 0)">buy now</button>  
+    <button (click)="decrementCartValue()">-</button>
+    <span>{{ addToCart }}</span>
+    <button (click)="incrementCartValue()">+</button>
+   
+   
+    <h2>event binding</h2>
+    <input (input) = "onNameChange($event)" >  <br> 
+    <p>name= {{name}}</p> -->
+
+
+    <app-search></app-search>
+
+<!----------------->
+    <!-- <h2>Direvtive= *ngFor</h2>
+    <p>used to loop over elements</p>
+<div *ngFor = "let item of listOfString" >
+    <p>current element of array is: {{item}}</p>
+</div> -->
+
+
+
+
+</div>
+
+
+<!--Disabled, Hidden, Checked-->
+<!--string interpolation doesnt work for above-->
